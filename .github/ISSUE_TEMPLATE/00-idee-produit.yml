@@ -1,0 +1,48 @@
+name: "G0 — Idée produit"
+description: "Proposer une idée d'application. Instruite par product-scout en porte G0."
+title: "[G0] "
+labels: ["gate:G0", "type:idée", "statut:triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Une app Vimiac est **gratuite, sans achat intégré, sans collecte de données, locale**.
+        Une idée qui suppose un abonnement, un compte ou un serveur est refusée d'office.
+  - type: textarea
+    id: besoin
+    attributes:
+      label: "Le besoin, en une phrase"
+      placeholder: "Quand je…, je dois…, et c'est pénible parce que…"
+    validations: {required: true}
+  - type: dropdown
+    id: frequence
+    attributes:
+      label: "À quelle fréquence ce besoin se présente-t-il ?"
+      options: ["Plusieurs fois par jour", "Quotidienne", "Hebdomadaire", "Mensuelle", "Plus rare"]
+    validations: {required: true}
+  - type: textarea
+    id: contournement
+    attributes:
+      label: "Comment fais-tu aujourd'hui, faute d'app ?"
+      description: "Si le contournement actuel est confortable, dis-le — c'est un signal d'abandon, pas un défaut."
+    validations: {required: true}
+  - type: textarea
+    id: existant
+    attributes:
+      label: "Ce qui existe déjà sur l'App Store, et pourquoi ça ne suffit pas"
+      description: "Prix, modèle, collecte, complexité, abandon. « Mal couvert » doit se démontrer."
+  - type: checkboxes
+    id: crible
+    attributes:
+      label: "Crible C1–C3 (sandbox Mac App Store) — coche ce que l'idée EXIGE"
+      description: "Une case cochée n'écarte pas l'idée automatiquement, mais product-scout devra la justifier — ou l'abandonner."
+      options:
+        - label: "C1 — lire la position/l'état des fenêtres d'AUTRES applications (Accessibilité cross-app)"
+        - label: "C2 — capturer ou inspecter le contenu de l'écran (Enregistrement de l'écran)"
+        - label: "C3 — sortir du bac à sable (accès disque large, injection, pilotage d'apps tierces)"
+  - type: input
+    id: source
+    attributes:
+      label: "Source (traçabilité — obligatoire)"
+      description: "Discussion, avis App Store, observation d'usage… D'où vient ce besoin ?"
+    validations: {required: true}

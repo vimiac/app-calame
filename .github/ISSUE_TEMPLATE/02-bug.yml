@@ -1,0 +1,36 @@
+name: "Bug"
+description: "Comportement incorrect d'une app livrée."
+title: "[Bug] "
+labels: ["type:bug", "statut:triage"]
+body:
+  - type: markdown
+    attributes:
+      value: "Merci du signalement. **N'inclus aucune donnée personnelle** dans ce rapport — les dépôts Vimiac sont publics."
+  - type: input
+    id: app
+    attributes:
+      label: "Application et version"
+      placeholder: "MonApp 1.2.0 (voir Réglages › À propos)"
+    validations: {required: true}
+  - type: input
+    id: os
+    attributes:
+      label: "Version de macOS / iOS et appareil"
+    validations: {required: true}
+  - type: textarea
+    id: attendu-obtenu
+    attributes:
+      label: "Ce que tu attendais / ce qui s'est passé"
+    validations: {required: true}
+  - type: textarea
+    id: repro
+    attributes:
+      label: "Étapes de reproduction"
+      placeholder: "1.\n2.\n3."
+    validations: {required: true}
+  - type: dropdown
+    id: frequence
+    attributes:
+      label: "Reproductible ?"
+      options: ["À chaque fois", "Souvent", "Rarement", "Vu une seule fois"]
+    validations: {required: true}

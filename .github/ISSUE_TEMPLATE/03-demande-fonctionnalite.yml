@@ -1,0 +1,34 @@
+name: "Demande de fonctionnalité"
+description: "Proposer une amélioration d'une app existante."
+title: "[Idée] "
+labels: ["type:fonctionnalité", "statut:triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Toute demande est scorée **RICE** puis arbitrée par un humain (voir `project-fields.md`).
+        Une demande refusée l'est **avec sa raison** : la boucle est toujours fermée avec l'auteur.
+  - type: input
+    id: app
+    attributes:
+      label: "Application concernée"
+    validations: {required: true}
+  - type: textarea
+    id: besoin
+    attributes:
+      label: "Le besoin — pas la solution"
+      description: "Décris ce que tu cherches à faire. La solution technique est notre travail."
+    validations: {required: true}
+  - type: textarea
+    id: contournement
+    attributes:
+      label: "Comment fais-tu aujourd'hui ?"
+  - type: checkboxes
+    id: principes
+    attributes:
+      label: "Compatibilité avec les principes Vimiac"
+      options:
+        - label: "Ma demande n'implique ni compte utilisateur, ni serveur, ni collecte de données"
+          required: true
+        - label: "Ma demande n'implique ni abonnement ni achat intégré"
+          required: true

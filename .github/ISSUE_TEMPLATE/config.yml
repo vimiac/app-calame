@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "🔒 Signaler un problème de sécurité"
+    url: "https://github.com/vimiac/app-calame/security/advisories/new"
+    about: "N'ouvre PAS d'issue publique pour une faille. Passe par un avis de sécurité privé."
